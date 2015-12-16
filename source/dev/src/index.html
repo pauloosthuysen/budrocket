@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BudRocketApp">
+	<head>
+		<title>BudRocket</title>
+		<link rel="stylesheet" href="assets/css/@APP_NAME@-@APP_VERSION@.css" />
+		<link rel="stylesheet" href="assets/css/vendor-@APP_VERSION@.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/#/home">@APP_NAME@ <span class="label label-warning versionLabel">v @APP_VERSION@</span></a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active" ng-if="CurrentPage == 'Home'"><a href="/#/home">Overview</a></li>
+						<li ng-if="CurrentPage != 'Home'"><a href="/#/home">Overview</a></li>
+						<li class="active" ng-if="CurrentPage == 'Transactions'"><a href="/#/transactions">Transactions</a></li>
+						<li ng-if="CurrentPage != 'Transactions'"><a href="/#/transactions">Transactions</a></li>
+						<li class="active" ng-if="CurrentPage == 'Categories'"><a href="/#/categories">Categories</a></li>
+						<li ng-if="CurrentPage != 'Categories'"><a href="/#/categories">Categories</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<div class="container">
+			<div class="BudRocket" ng-view></div>
+		</div>
+		<script type="text/javascript" src="assets/js/vendor-@APP_VERSION@.min.js"></script>
+		<script type="text/javascript" src="assets/js/templates-@APP_VERSION@.min.js"></script>
+		<script type="text/javascript" src="assets/js/@APP_NAME@-@APP_VERSION@.min.js"></script>		
+	</body>
+</html>
