@@ -15,5 +15,6 @@
     "jshint-stylish": "^2.1.0"
   },
   "srcDir": "src",
-  "dstDir": "C:/inetpub/wwwroot/budrocket"
+  "dstDir": "/Applications/MAMP/htdocs/budrocket",
+  "siteRoot": "/budrocket/"
 }

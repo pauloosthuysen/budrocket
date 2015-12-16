@@ -15,16 +15,16 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/#/home">@APP_NAME@ <span class="label label-warning versionLabel">v @APP_VERSION@</span></a>
+					<a class="navbar-brand" href="@SITE_ROOT@#/home">@APP_NAME@ <span class="label label-warning versionLabel">v @APP_VERSION@</span></a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active" ng-if="CurrentPage == 'Home'"><a href="/#/home">Overview</a></li>
-						<li ng-if="CurrentPage != 'Home'"><a href="/#/home">Overview</a></li>
-						<li class="active" ng-if="CurrentPage == 'Transactions'"><a href="/#/transactions">Transactions</a></li>
-						<li ng-if="CurrentPage != 'Transactions'"><a href="/#/transactions">Transactions</a></li>
-						<li class="active" ng-if="CurrentPage == 'Categories'"><a href="/#/categories">Categories</a></li>
-						<li ng-if="CurrentPage != 'Categories'"><a href="/#/categories">Categories</a></li>
+						<li class="active" ng-if="CurrentPage == 'Home'"><a href="@SITE_ROOT@#/home">Overview</a></li>
+						<li ng-if="CurrentPage != 'Home'"><a href="@SITE_ROOT@#/home">Overview</a></li>
+						<li class="active" ng-if="CurrentPage == 'Transactions'"><a href="@SITE_ROOT@#/transactions">Transactions</a></li>
+						<li ng-if="CurrentPage != 'Transactions'"><a href="@SITE_ROOT@#/transactions">Transactions</a></li>
+						<li class="active" ng-if="CurrentPage == 'Categories'"><a href="@SITE_ROOT@#/categories">Categories</a></li>
+						<li ng-if="CurrentPage != 'Categories'"><a href="@SITE_ROOT@#/categories">Categories</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>

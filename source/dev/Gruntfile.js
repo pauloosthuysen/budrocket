@@ -59,6 +59,10 @@ module.exports = function(grunt) {
           {
             from: '@APP_NAME@',
             to: '<%= pkg.name %>'
+          },
+          {
+            from: '@SITE_ROOT@',
+            to: '<%= pkg.siteRoot %>'
           }
         ]
       }
