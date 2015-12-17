@@ -3,10 +3,9 @@
 		function($scope, $rootScope, $http){
 			$rootScope.CurrentPage = 'Home';
 			$scope.title = 'Home';
-			$scope.expenses = [];
-			$scope.incomes = [];
 			$scope.expensesTotal = 0;
 			$scope.incomesTotal = 0;
+			$scope.cashflowtotal = 0;
 			
 			$scope.init = init;
 			$scope.loadExpenses = loadExpenses;
@@ -19,20 +18,19 @@
 			
 			function loadExpenses(){
 				$http.get('data/expenses.json').success(function(response){
-					$scope.expenses = response;
-					
 					for(var i = 0; i < response.length; i++){
+						response[i].Amount = response[i].Amount * -1;
 						$scope.expensesTotal += parseFloat(response[i].Amount, 2);
+						$scope.cashflowtotal += parseFloat(response[i].Amount, 2);;
 					}
 				});
 			}
 			
 			function loadIncomes(){
 				$http.get('data/incomes.json').success(function(response){
-					$scope.incomes = response;
-					
 					for(var i = 0; i < response.length; i++){
 						$scope.incomesTotal += parseFloat(response[i].Amount, 2);
+						$scope.cashflowtotal += parseFloat(response[i].Amount, 2);;
 					} 
 				});
 			}
