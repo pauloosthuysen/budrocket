@@ -1,0 +1,32 @@
+[
+	{
+		"Date": "2015-12-01",
+		"Description": "Salary",
+		"Amount": "10000.00",
+		"Type": "Income"
+	},
+	{
+		"Date": "2015-12-01",
+		"Description": "Rental Income",
+		"Amount": "5000.00",
+		"Type": "Income"
+	},
+	{
+		"Date": "2015-12-01",
+		"Description": "Fuel",
+		"Amount": "1400.00",
+		"Type": "Expense"
+	},
+	{
+		"Date": "2015-12-01",
+		"Description": "Groceries",
+		"Amount": "2500.00",
+		"Type": "Expense"
+	},
+	{
+		"Date": "2015-12-01",
+		"Description": "Rental",
+		"Amount": "4500.00",
+		"Type": "Expense"
+	}
+]
