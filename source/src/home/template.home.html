@@ -1,29 +1,63 @@
-<h1 ng-init="init()">{{title}}</h1>
-<div class="row">
-	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-		<div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-				<label>Incomes</label>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-				{{incomesTotal | number: 2}}
-			</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+	<h2 ng-init="init()">{{title}}</h2>
+	<div class="row">
+		<div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 text-right">
+			<label>Incomes</label>
 		</div>
-		<div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-				<label>Expenses</label>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right totalsLast">
-				{{expensesTotal | number: 2}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-				<label>Balance</label>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
-				<label>{{expensesTotal + incomesTotal | number: 2}}</label>
-			</div>
+		<div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 text-right">
+			{{incomesTotal | number: 2}}
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 text-right">
+			<label>Expenses</label>
+		</div>
+		<div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 text-right totalsLast">
+			{{expensesTotal | number: 2}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 text-right">
+			<label>Balance</label>
+		</div>
+		<div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 text-right">
+			<label>{{expensesTotal + incomesTotal | number: 2}}</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-if="tags.length > 0">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h2>Tags</h2>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="tag in tags">
+		<label for="">{{tag.Name}}</label>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Description</th>
+								<th class="text-right">Amount</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="transaction in transactions | filter: {Tag: tag.Name} | orderBy: 'Date'">
+								<td>{{transaction.Date}}</td>
+								<td>{{transaction.Description}}</td>
+								<td class="text-right">{{transaction.Amount | number:2}}</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td class="text-right"><b>{{getTagTotal(tag.Name) | number:2}}</b></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>	
+		</div>
+	</div>	
 </div>
