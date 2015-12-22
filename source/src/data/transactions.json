@@ -1,48 +1,48 @@
 [
 	{
-		"Date": "2015-12-01",
+		"Date": "1",
 		"Description": "Salary",
 		"Amount": "10000.00",
 		"Type": "Income",
 		"Tag": ""
 	},
 	{
-		"Date": "2015-12-01",
+		"Date": "1",
 		"Description": "Rental Income",
 		"Amount": "5000.00",
 		"Type": "Income",
 		"Tag": ""
 	},
 	{
-		"Date": "2015-12-03",
+		"Date": "3",
 		"Description": "Fuel",
 		"Amount": "610.00",
 		"Type": "Expense",
 		"Tag": "Fuel"
 	},
 	{
-		"Date": "2015-12-05",
+		"Date": "5",
 		"Description": "Ed's",
 		"Amount": "370.40",
 		"Type": "Expense",
 		"Tag": "Daily Expenses"
 	},
 	{
-		"Date": "2015-12-01",
+		"Date": "1",
 		"Description": "Rental",
 		"Amount": "4500.00",
 		"Type": "Expense",
 		"Tag": ""
 	},
 	{
-		"Date": "2015-12-01",
+		"Date": "1",
 		"Description": "Fuel Reserve",
 		"Amount": "1400",
 		"Type": "Income",
 		"Tag": "Fuel"
 	},
 	{
-		"Date": "2015-12-01",
+		"Date": "1",
 		"Description": "Daily Expenses Reserve",
 		"Amount": "3100",
 		"Type": "Income",
