@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       options: {
         force: true
       },
-      build: ['<%= pkg.dstDir %>/*.html', '<%= pkg.dstDir %>/assets/**']
+      build: ['<%= pkg.dstDir %>/*.html', '<%= pkg.dstDir %>/assets/**', '<%= pkg.dstDir %>/data/**']
     },
     replace:{
       build:{

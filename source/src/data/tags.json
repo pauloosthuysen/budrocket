@@ -1,8 +1,12 @@
 [
 	{
-		"Name": "Fuel"
+		"Name": "Fuel",
+		"Ordinal": 1,
+		"Budget": 1400.00
 	},
 	{
-		"Name": "Daily Expenses"
+		"Name": "Daily Expenses",
+		"Ordinal": 2,
+		"Budget": 3100.00
 	}
 ]
