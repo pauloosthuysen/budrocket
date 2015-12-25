@@ -33,7 +33,15 @@
 		<h2>Tags</h2>
 	</div>
 	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="tag in tags | orderBy: 'Ordinal'">
-		<label for="">{{tag.Name}}</label>
+		<div class="row">
+			<label for="">{{tag.Name}}</label>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+				<button type="button" class="btn btn-xs btn-success btn-block">
+					<span class="glyphicon glyphicon-plus"></span>	
+					Add
+				</button>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="table-responsive">
